@@ -9,7 +9,7 @@ class Klavier : public MusikInstrument{
 
 public:
     Klavier (){
-       // cout << "Wie viele Musiker sollen im Orchester spielen? ";
+        cout << "Konstruktor: Klavier()\n ";
     }
     ~Klavier (){
         cout << "Destruktor: ~Klavier()\n ";

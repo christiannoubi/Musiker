@@ -15,18 +15,18 @@ public:
 
     }
     Musiker (string name) {
-        //cout << "Wie viele Musiker sollen im Orchester spielen? ";
+        cout << "Konstruktor: Musiker(string name) "<< name <<"\n";
     }
     virtual ~Musiker () {
         cout << "Destruktor: ~Musiker() \n";
     }
     void weiseInstrumentZu (MusikInstrument const* instrument) {
-
+        this->instrument = instrument;
     }
     void spielen () {
-
+        cout << name <<"erhält Klavier" <<"\n";
     }
     string liefereName () {
-
+        return name;
     }
 };

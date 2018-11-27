@@ -1,17 +1,19 @@
 #pragma once;
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Musiker.h"
 using namespace std;
 
 class Orchester: public Musiker{
 
 private:
-    vector<Musiker> const* musiker;
+    vector<const Musiker*>  musiker;
 
 public:
     Orchester () {
-        //cout << "Wie viele Musiker sollen im Orchester spielen? ";
+        cout << "Konstruktor: Orchester() \n";
+
     }
     virtual ~Orchester () {
         cout << "Destruktor: ~Orchester() \n";
@@ -19,7 +21,7 @@ public:
     void spielen () {
 
     }
-    void hinzufuegen (Musiker const* musiker) {
-
+    void hinzufuegen (Musiker* musiker1) {
+        musiker.push_back(musiker1);
     }
 };

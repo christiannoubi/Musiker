@@ -1,9 +1,6 @@
 #include "Klavier.h"
 #include "Trompete.h"
 #include "Orchester.h"
-#include <cstdlib>
-#include <ctime>
-#include <climits>
 #include <iostream>
 #include <string>
 using namespace std;
@@ -35,7 +32,7 @@ using namespace std;
     cout << "Wie viele Musiker sollen im Orchester spielen? ";
     cin >> n;
     cin.ignore(INT_MAX,'\n'); // entfernt übriggebliebenen Zeilenumbruch der letzten Eingabe
-    cout << "+++ Orchester mit " << n << " Musikern besetzen\n";
+    cout << "++++Orchester mit++++" << n << " Musikern besetzen\n";
     for(int i=0; i<n; i++) {
     cout << "Wie heißt der " << i+1 << ". Musiker? ";
     string name;

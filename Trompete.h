@@ -8,8 +8,7 @@ class Trompete : public MusikInstrument{
 
 public:
     Trompete (){
-       // cout << "Wie viele Musiker sollen im Orchester spielen? ";
-
+        cout << "Konstruktor: Trompete()\n ";
     }
     ~Trompete (){
         cout << "Destruktor: ~Trompete()\n ";
