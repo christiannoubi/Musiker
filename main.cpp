@@ -32,7 +32,7 @@ using namespace std;
     cout << "Wie viele Musiker sollen im Orchester spielen? ";
     cin >> n;
     cin.ignore(INT_MAX,'\n'); // entfernt übriggebliebenen Zeilenumbruch der letzten Eingabe
-    cout << "++++Orchester mit++++" << n << " Musikern besetzen\n";
+    cout << "++++Orchester mit " << n << " Musikern besetzen\n";
     for(int i=0; i<n; i++) {
     cout << "Wie heißt der " << i+1 << ". Musiker? ";
     string name;
@@ -44,5 +44,5 @@ using namespace std;
 
       cout << "+++ Das Konzert beginnt+++\n";
       orchester.spielen();
-      cout << "+++ Applaus+++\n";
+      cout << "+++Applaus+++\n";
       }

@@ -8,13 +8,15 @@ using namespace std;
 class Klavier : public MusikInstrument{
 
 public:
-    Klavier (){
+
+    Klavier () : MusikInstrument(" Klavier "){
         cout << "Konstruktor: Klavier()\n ";
     }
-    ~Klavier (){
+
+    virtual ~Klavier (){
         cout << "Destruktor: ~Klavier()\n ";
     }
-    virtual void spielen () {
-
+    virtual void spielen () const{
+        cout << "Klavier klimpert\n ";
     }
 };

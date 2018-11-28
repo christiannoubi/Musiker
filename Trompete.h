@@ -7,13 +7,13 @@ using namespace std;
 class Trompete : public MusikInstrument{
 
 public:
-    Trompete (){
+    Trompete () : MusikInstrument(" Trompete "){
         cout << "Konstruktor: Trompete()\n ";
     }
-    ~Trompete (){
+     virtual ~Trompete (){
         cout << "Destruktor: ~Trompete()\n ";
     }
-    virtual void spielen () {
-
+    virtual void spielen () const {
+        cout << "Trompete troetet\n ";
     }
 };

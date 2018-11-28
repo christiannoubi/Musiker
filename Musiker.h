@@ -4,7 +4,7 @@
 #include "MusikInstrument.h"
 using namespace std;
 
-class Musiker: public MusikInstrument {
+class Musiker {
 
 private:
     string name;
@@ -15,18 +15,21 @@ public:
 
     }
     Musiker (string name) {
-        cout << "Konstruktor: Musiker(string name) "<< name <<"\n";
+        this->name = name;
+        cout << "Konstruktor: Musiker(string name) "<< this->name <<"\n";
     }
-    virtual ~Musiker () {
-        cout << "Destruktor: ~Musiker() \n";
+     virtual ~Musiker () {
+        cout << "Destruktor: ~Musiker() "<< this->name <<"\n";
     }
+
     void weiseInstrumentZu (MusikInstrument const* instrument) {
         this->instrument = instrument;
     }
-    void spielen () {
-        cout << name <<"erhält Klavier" <<"\n";
+    void spielen () const {
+        cout << this->name <<" spielt " <<instrument->liefereName()<<"\n";
+        instrument->spielen();
     }
-    string liefereName () {
+    string liefereName () const {
         return name;
     }
 };

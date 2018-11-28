@@ -5,7 +5,7 @@
 #include "Musiker.h"
 using namespace std;
 
-class Orchester: public Musiker{
+class Orchester{
 
 private:
     vector<const Musiker*>  musiker;
@@ -18,10 +18,14 @@ public:
     virtual ~Orchester () {
         cout << "Destruktor: ~Orchester() \n";
     }
-    void spielen () {
 
+    void spielen () {
+    for (int i = 0; i< musiker.size();i++) {
+        this->musiker[i]->liefereName();
+        this->musiker[i]->spielen();
+        }
     }
-    void hinzufuegen (Musiker* musiker1) {
-        musiker.push_back(musiker1);
+    void hinzufuegen (Musiker const* musiker) {
+        this->musiker.push_back(musiker);
     }
 };
