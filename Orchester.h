@@ -17,6 +17,10 @@ public:
     }
     virtual ~Orchester () {
         cout << "Destruktor: ~Orchester() \n";
+        for (int i = 0; i< musiker.size();i++) {
+            delete musiker[i];
+
+        }
     }
 
     void spielen () {

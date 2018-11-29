@@ -13,6 +13,7 @@ public:
      virtual ~Trompete (){
         cout << "Destruktor: ~Trompete()\n ";
     }
+
     virtual void spielen () const {
         cout << "Trompete troetet\n ";
     }

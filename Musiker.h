@@ -20,6 +20,8 @@ public:
     }
      virtual ~Musiker () {
         cout << "Destruktor: ~Musiker() "<< this->name <<"\n";
+        delete instrument;
+
     }
 
     void weiseInstrumentZu (MusikInstrument const* instrument) {

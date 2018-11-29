@@ -10,6 +10,7 @@ private:
 
 public:
     MusikInstrument () {
+        this->name = "Irgendein instrument";
         cout << "Konstruktor: MusikInstrument() \n";
 
     }
@@ -20,9 +21,10 @@ public:
 
     virtual ~MusikInstrument () {
         cout << "Destruktor: ~MusikInstrument()"<<this->name<<"\n";
+
     }
     virtual void spielen () const {
-        cout << "Musikinstrument spielt irgendwie\n";
+        cout << "Irgendein Musikinstrument erklingt irgendwie\n";
     }
     string liefereName () const {
         return name;

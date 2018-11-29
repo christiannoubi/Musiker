@@ -11,6 +11,7 @@ public:
 
     Klavier () : MusikInstrument(" Klavier "){
         cout << "Konstruktor: Klavier()\n ";
+
     }
 
     virtual ~Klavier (){
